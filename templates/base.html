@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'head.html' %}
+
+{% include 'header.html' %}
+
+<title>
+    {% block title %}
+    {% endblock %}
+</title>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="d-flex flex-row">
+                <div class="p-1 text-secondary">
+                    <a href="{% url 'homepage' %}">Homepage</a>
+                    {% block direction_bar %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+
+</html>
